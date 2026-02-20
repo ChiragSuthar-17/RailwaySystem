@@ -5,7 +5,8 @@
 ## 📸 Project Screenshots
 
 ### 🔐 Login Page
-![Login Page](images/login-page.png)
+![Login-Page](Images/Login-Page.png)
+
 
 ### 🏠 Home Page
 ![Home Page](images/home-page.png)
