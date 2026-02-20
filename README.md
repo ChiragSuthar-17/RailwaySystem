@@ -1,12 +1,24 @@
 # RailwaySystem
 
-## Project Screenshots
+# 🚆 Railway Management System
 
-### Home Page
-![Home Page](images/homepage.png)
+## 📸 Project Screenshots
 
-### Booking Page
-![Booking Page](images/booking.png)
+### 🔐 Login Page
+![Login Page](images/login-
+page.png)
 
-### Admin Panel
-![Admin Panel](images/admin.png)
+### 🏠 Home Page
+![Home Page](images/home-page.png)
+
+### 🔍 Search Page
+![Search Page](images/search-page.png)
+
+### 🎟 Booking Page
+![Booking Page](images/booking-page.png)
+
+### 🧾 Booking Details Page
+![Booking Details Page](images/booking-details-page.png)
+
+### 👤 Create Account Page
+![Create Account Page](images/create-account-page.png)
