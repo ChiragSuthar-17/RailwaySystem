@@ -1,0 +1,240 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logoIcon {
+  font-size: 24px;
+  color: #2563eb;
+}
+
+.logoText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #2563eb;
+}
+
+.navIcon {
+  font-size: 16px;
+}
+
+.authSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+.userIcon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.userEmail {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.loginButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.loginButton:hover {
+  color: #1e40af;
+}
+
+.registerButton {
+  padding: 8px 16px;
+  font-size: 14px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.registerButton:hover {
+  background: #1e40af;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logoutButton:hover {
+  background: #fecaca;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  background: #f9fafb;
+}
+
+/* Footer Styles */
+.footer {
+  background: white;
+  border-top: 1px solid #e5e7eb;
+  margin-top: auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 32px 0;
+}
+
+@media (min-width: 768px) {
+  .footerGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.footerLogoIcon {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.footerLogoText {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.footerDescription {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.footerHeading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.footerLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerLinks li {
+  margin-bottom: 8px;
+}
+
+.footerLink {
+  font-size: 14px;
+  color: #6b7280;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footerLink:hover {
+  color: #2563eb;
+}
+
+.footerBottom {
+  border-top: 1px solid #e5e7eb;
+  padding: 24px 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 14px;
+}

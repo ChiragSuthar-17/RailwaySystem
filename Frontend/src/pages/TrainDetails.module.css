@@ -1,0 +1,811 @@
+.trainDetails {
+  min-height: 100vh;
+  background: #f9fafb;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Loading State */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-radius: 50%;
+  border-top-color: #2563eb;
+  animation: spin 1s linear infinite;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* Error State */
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.errorIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.errorTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  color: #6b7280;
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+.backButton {
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #1e40af;
+}
+
+/* Header */
+.header {
+  padding: 32px 0 24px;
+}
+
+.trainHeader {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .trainHeader {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.trainInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .trainInfo {
+    margin-bottom: 0;
+  }
+}
+
+.trainIcon {
+  font-size: 32px;
+  color: #2563eb;
+}
+
+.trainName {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.trainNumber {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.trainFare {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .trainFare {
+    text-align: right;
+  }
+}
+
+.fareAmount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.fareLabel {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Content Grid */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Section Title */
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+/* Cards */
+.journeyCard,
+.routeCard,
+.availabilityCard,
+.quickLinksCard {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+/* Journey Timeline */
+.journeyTimeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .journeyTimeline {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.timelineStation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+
+.stationDot {
+  width: 12px;
+  height: 12px;
+  background: #2563eb;
+  border-radius: 50%;
+  position: relative;
+}
+
+.stationDot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dbeafe;
+  border-radius: 50%;
+}
+
+.stationInfo {
+  flex: 1;
+}
+
+.stationName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.stationTime {
+  font-size: 16px;
+  color: #2563eb;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.stationDate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.calendarIcon {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.timelineDuration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.durationIcon {
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+.durationText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.clockIcon {
+  font-size: 12px;
+}
+
+/* Journey Stats */
+.journeyStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.statIcon {
+  font-size: 20px;
+  color: #2563eb;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 2px;
+}
+
+/* Route Information */
+.routeList {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.routeItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.2s;
+}
+
+.routeItem:hover {
+  background: #f9fafb;
+}
+
+.routeItem:last-child {
+  border-bottom: none;
+}
+
+.routeSequence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+}
+
+.routeStation {
+  flex: 1;
+}
+
+.stationCode {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2px;
+}
+
+.stationName {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.routeTimes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+}
+
+.routeTime {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.timeLabel {
+  display: inline-block;
+  width: 30px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+/* Availability Card */
+.availabilityInfo {
+  margin-bottom: 24px;
+}
+
+.availabilityItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.availabilityLabel {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.availabilityValue {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.seatCount {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.seatsAvailable {
+  color: #059669;
+}
+
+.seatsUnavailable {
+  color: #dc2626;
+}
+
+.seatProgress {
+  margin-top: 24px;
+}
+
+.progressBar {
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progressGreen {
+  background: #10b981;
+}
+
+.progressRed {
+  background: #ef4444;
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Booking Section */
+.bookingSection {
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.fareBreakdown {
+  margin-bottom: 24px;
+}
+
+.fareItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.fareLabel {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.fareValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.fareTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 16px;
+}
+
+.totalLabel {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.totalValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.bookButton {
+  width: 100%;
+  padding: 16px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.bookButton:hover:not(:disabled) {
+  background: #1e40af;
+}
+
+.bookButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabledButton {
+  background: #9ca3af !important;
+}
+
+.disabledButton:hover {
+  background: #9ca3af !important;
+}
+
+.bookIcon {
+  font-size: 16px;
+}
+
+.bookingNote {
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Quick Links */
+.quickLinksCard {
+  padding: 20px;
+}
+
+.quickLinksTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quickLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f3f4f6;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.quickLink:hover {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.quickLinkIcon {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+.dateSelector {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+.dateLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.dateLabelIcon {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.dateInput {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  background: white;
+  transition: all 0.2s;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Station City Name */
+.cityName {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+/* Fix for stationDot to prevent overlap */
+.stationDot {
+  width: 12px;
+  height: 12px;
+  background: #2563eb;
+  border-radius: 50%;
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.stationDot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #dbeafe;
+  border-radius: 50%;
+}
+
+/* Route sequence number styling */
+.routeSequence {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Progress bar fixes */
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progressGreen {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.progressRed {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+/* Error state improvements */
+.errorIcon {
+  font-size: 64px;
+  margin-bottom: 16px;
+  color: #dc2626;
+}
+
+.errorTitle {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 8px;
+}
+
+.errorMessage {
+  color: #6b7280;
+  margin-bottom: 24px;
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.backButton {
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #1e40af;
+}
+
+/* Loading state improvements */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e5e7eb;
+  border-radius: 50%;
+  border-top-color: #2563eb;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loadingText {
+  color: #6b7280;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .journeyTimeline {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .timelineStation {
+    width: 100%;
+  }
+  
+  .timelineDuration {
+    padding: 8px 0;
+  }
+  
+  .journeyStats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .trainHeader {
+    padding: 16px;
+  }
+  
+  .trainName {
+    font-size: 22px;
+  }
+  
+  .fareAmount {
+    font-size: 28px;
+  }
+}
