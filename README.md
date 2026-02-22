@@ -5,23 +5,22 @@
 ## 📸 Project Screenshots
 
 ### 🔐 Login Page
-![Login Page](images/login-
-page.png)
+![Login Page](Images/Login-Page.png)
 
 ### 🏠 Home Page
-![Home Page](images/home-page.png)
+![Home Page](Images/Home-page-Suggestion.png)
 
 ### 🔍 Search Page
-![Search Page](images/search-page.png)
+![Search Page](Images/Search-page.png)
 
 ### 🎟 Booking Page
-![Booking Page](images/booking-page.png)
+![Booking Page](Images/booking-page.png)
 
 ### 🧾 Booking Details Page
-![Booking Details Page](images/booking-details-page.png)
+![Booking Details Page](Images/Booking-details-page.png)
 
 ### 👤 Create Account Page
-![Create Account Page](images/create-account-page.png)
+![Create Account Page](Images/create-account-page.png)
 
 
 
@@ -256,7 +255,6 @@ This project demonstrates:
 ## 👨‍💻 Author
 
 **Chiarg Hiralal Suthar**
-Roll No: 194-D
 
 ---
 
