@@ -250,15 +250,6 @@ This project demonstrates:
 * Algorithm efficiency comparison
 * Performance optimization techniques
 
----
-
-## 📸 Screenshots
-
-(Add screenshots of your UI here)
-
-```
-![Home Page](./screenshots/home.png)
-```
 
 ---
 
